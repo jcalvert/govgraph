@@ -1,0 +1,4 @@
+Govgraph is an experimentation in using a graphing database (neo4j) to explore the relationships between laws, bills, people, places, money, etc in the political sphere. 
+The main differentiating (is it?) aspect here is a focus on discovering relationships. 
+
+For the future, considering advanced statistical analysis. 

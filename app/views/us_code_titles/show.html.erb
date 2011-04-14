@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @us_code_title.name %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @us_code_title.text %>
+</p>
+
+
+<%= link_to 'Edit', edit_us_code_title_path(@us_code_title) %> |
+<%= link_to 'Back', us_code_titles_path %>

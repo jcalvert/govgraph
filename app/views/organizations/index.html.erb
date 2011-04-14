@@ -1,0 +1,31 @@
+<h1>Listing organizations</h1>
+
+<table>
+  <tr>
+    <th>Government</th>
+    <th>Nonprofit</th>
+    <th>Corporation</th>
+    <th>Foreign</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @organizations.each do |organization| %>
+  <tr>
+    <td><%= organization.government %></td>
+    <td><%= organization.nonprofit %></td>
+    <td><%= organization.corporation %></td>
+    <td><%= organization.foreign %></td>
+    <td><%= organization.name %></td>
+    <td><%= link_to 'Show', organization %></td>
+    <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+    <td><%= link_to 'Destroy', organization, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Organization', new_organization_path %>

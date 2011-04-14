@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Government:</b>
+  <%= @organization.government %>
+</p>
+
+<p>
+  <b>Nonprofit:</b>
+  <%= @organization.nonprofit %>
+</p>
+
+<p>
+  <b>Corporation:</b>
+  <%= @organization.corporation %>
+</p>
+
+<p>
+  <b>Foreign:</b>
+  <%= @organization.foreign %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @organization.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_organization_path(@organization) %> |
+<%= link_to 'Back', organizations_path %>

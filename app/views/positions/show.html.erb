@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Senate:</b>
+  <%= @position.senate %>
+</p>
+
+<p>
+  <b>House:</b>
+  <%= @position.house %>
+</p>
+
+<p>
+  <b>Executive:</b>
+  <%= @position.executive %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @position.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>

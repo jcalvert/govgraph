@@ -1,0 +1,37 @@
+<%= form_for(@organization) do |f| %>
+  <% if @organization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
+
+      <ul>
+      <% @organization.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :government %><br />
+    <%= f.check_box :government %>
+  </div>
+  <div class="field">
+    <%= f.label :nonprofit %><br />
+    <%= f.check_box :nonprofit %>
+  </div>
+  <div class="field">
+    <%= f.label :corporation %><br />
+    <%= f.check_box :corporation %>
+  </div>
+  <div class="field">
+    <%= f.label :foreign %><br />
+    <%= f.check_box :foreign %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

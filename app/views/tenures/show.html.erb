@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start:</b>
+  <%= @tenure.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @tenure.end %>
+</p>
+
+
+<%= link_to 'Edit', edit_tenure_path(@tenure) %> |
+<%= link_to 'Back', tenures_path %>

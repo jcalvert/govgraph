@@ -1,0 +1,25 @@
+<%= form_for(@tenure) do |f| %>
+  <% if @tenure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tenure.errors.count, "error") %> prohibited this tenure from being saved:</h2>
+
+      <ul>
+      <% @tenure.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start %><br />
+    <%= f.date_select :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br />
+    <%= f.date_select :end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

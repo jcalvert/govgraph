@@ -1,0 +1,29 @@
+<h1>Listing positions</h1>
+
+<table>
+  <tr>
+    <th>Senate</th>
+    <th>House</th>
+    <th>Executive</th>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @positions.each do |position| %>
+  <tr>
+    <td><%= position.senate %></td>
+    <td><%= position.house %></td>
+    <td><%= position.executive %></td>
+    <td><%= position.title %></td>
+    <td><%= link_to 'Show', position %></td>
+    <td><%= link_to 'Edit', edit_position_path(position) %></td>
+    <td><%= link_to 'Destroy', position, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Position', new_position_path %>
